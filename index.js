@@ -15,6 +15,7 @@ var message = {
     "午安":"午安"
 	"晚安":"晚安",
     "新年快樂":"新年快樂"
+	"你住那裏":"我住JUST"
 };
 
 bot.on('message', function (event) {
@@ -25,6 +26,22 @@ bot.on('message', function (event) {
         respone = '我不懂你說的 ['+event.message.text+']';
     }
 	console.log(event.message.text + ' -> ' + respone);
+    bot.reply(event.replyToken, respone);
+});
+
+bot.on('beacon', function (event) {
+    console.log('beacon: ' + event.beacon.type);
+    var respone;
+    switch(event.beacon.type){
+        case 'enter':
+            respone = '你進入教室';
+            break;
+        case 'leave':
+            respone = '你離開教室';
+            break;
+        default:
+            respone = '我壞掉了';
+    }
     bot.reply(event.replyToken, respone);
 });
 
