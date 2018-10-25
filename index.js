@@ -13,9 +13,9 @@ const bot = require('linebot')({
 
 bot.on('message', function (event) {
     let requestMessage = event.message.text;
+    let lineid = event.source.userId;
     if (requestMessage.indexOf("綁定") >= 0) {
         let bindId = requestMessage.replace("綁定", "");
-        let lineid = event.source.userId;
         let user = fireBaseCollector.bind(lineid, bindId);
         if (user) {
             broadcast("user", {TYPE: "UPDATE_USER"});
