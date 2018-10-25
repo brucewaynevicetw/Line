@@ -1,7 +1,7 @@
 const firebase = require("firebase");
 
-const PROJECT_ID = "line-c0531>";
-const API_KEY = "AIzaSyBJaEhRhdUM26__8hvkVUbsOA_iwyU7wVE";
+const PROJECT_ID = "line-f2448";
+const API_KEY = "AIzaSyBy9iiXu5tw_y8NKQTBjxrd6OljlTcGcRI";
 
 firebase.initializeApp({
     apiKey: API_KEY,
