@@ -48,6 +48,24 @@ bot.on('message', function (event) {
     });
 });
 
+bot.on('beacon', function (event) {
+    console.log('beacon: ' + event.beacon.type);
+    var respone;
+    switch(event.beacon.type){
+        case 'enter':
+            respone = '你進入教室';
+            break;
+        case 'leave':
+            respone = '你離開教室';
+            break;
+        default:
+            respone = '我壞掉了';
+    }
+    bot.reply(event.replyToken, respone);
+});
+
+
+
 const app = express();
 app.post('/', bot.parser());
 app.get('/', function (req, res) {
