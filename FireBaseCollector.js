@@ -24,6 +24,17 @@ ref.on('value', function (d) {
         var ref = db.ref("/Messages/");
         var value = {
             "你好": "很好"
+            "你是誰" : "郭力魚",
+    "早安" : "早"
+
+            
+            
+            
+            
+            
+            
+            
+            
         }
         ref.set(value);
     }
