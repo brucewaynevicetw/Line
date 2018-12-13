@@ -53,10 +53,10 @@ bot.on('beacon', function (event) {
     var respone;
     switch(event.beacon.type){
         case 'enter':
-            respone = '你進入教室';
+            respone = '你進入景文科大501教室';
             break;
         case 'leave':
-            respone = '你離開教室';
+            respone = '你離開景文科大501教室';
             break;
         default:
             respone = '我壞掉了';
