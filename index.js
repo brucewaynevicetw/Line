@@ -53,10 +53,12 @@ bot.on('beacon', function (event) {
     var respone;
     switch(event.beacon.type){
         case 'enter':
-            respone = '你進入景文科大501教室';
+            respone = '你進入景文科大501教室,經緯度:24.950621, 121.510877
+
+';
             break;
         case 'leave':
-            respone = '你離開景文科大501教室';
+            respone = '你離開景文科大501教室,經緯度:24.950621, 121.510877';
             break;
         default:
             respone = '我壞掉了';
