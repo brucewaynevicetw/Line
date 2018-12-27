@@ -53,10 +53,10 @@ bot.on('beacon', function (event) {
     var respone;
     switch(event.beacon.type){
         case 'enter':
-            respone = '你進入景文科大501教室,經緯度:24.950621, 121.510877';
+            respone = '♬你進入景文科大501教室,經緯度:24.950621, 121.510877,溫度:17°c,https://www.cwb.gov.tw/V7/forecast/week/temperature_trend.htm';
             break;
         case 'leave':
-            respone = '你離開景文科大501教室,經緯度:24.950621, 121.510877';
+            respone = '♬你離開景文科大501教室,經緯度:24.950621, 121.510877,溫度:17°c,https://www.cwb.gov.tw/V7/forecast/week/temperature_trend.htm';
             break;
         default:
             respone = '我壞掉了';
